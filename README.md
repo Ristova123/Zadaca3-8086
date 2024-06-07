@@ -23,7 +23,7 @@ MOV ES,AX
 LDS SI, PASSWORD ;SI покажува на password
 LEA DI, INPUT_PW ;DI покажува на input_pw
 MOV CX, 08H ;бројач на 8 знаци
-CLD ;DF=0инкремент на SI,DI
+CLD ;DF=0инкремент на SI,DI
 REPE CMPSB ;while (CX<>0 and ZF=1)
 JNE SOUNDALARM ;ако е поради ZF
 JMP O_K ;ако не се е OK
